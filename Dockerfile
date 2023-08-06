@@ -51,7 +51,6 @@ RUN wget https://dot.net/v1/dotnet-install.sh -O dotnet-install.sh \
     && chmod +x ./dotnet-install.sh \
     && ./dotnet-install.sh --install-dir /usr/share/dotnet --version latest --channel LTS\
     && ./dotnet-install.sh --install-dir /usr/share/dotnet --version latest --channel STS\
-    aspnetcore
     && ln -s /usr/share/dotnet/dotnet /usr/bin/dotnet \
     && dotnet --list-runtimes \
     && dotnet --list-sdks
