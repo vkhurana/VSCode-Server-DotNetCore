@@ -1,6 +1,6 @@
-# VSCode Server with .NET Core SDK and PowerShell Pre-Installed
+# VSCode Server with .NET Core SDK Pre-Installed
 
-This is a docker image of VSCode Server with the .NET Core SDK and PowerShell pre-installed.  
+This is a docker image of VSCode Server with the .NET Core SDK pre-installed.  
 Docker image is based on [LinuxServer.io Code-Server](https://github.com/linuxserver/docker-code-server), which is based on [Coder.com Code-Server](https://github.com/cdr/code-server).  
 
 ## License
@@ -16,8 +16,8 @@ Docker image is based on [LinuxServer.io Code-Server](https://github.com/linuxse
 ## Container Images
 
 Docker container images are published on [Docker Hub](https://hub.docker.com/r/vkhurana/vscode-server-dotnetcore).  
-Images are tagged using `latest`, `3.1` and `7.0`.  
-`latest` includes .NET Core 3.1 and .NET 7.0.  
+Images are tagged using `latest`.  
+`latest` includes current STS and LTS builds of dot net.  
 Images are automatically rebuilt every Monday morning, picking up the latest updates.  
 ![Docker Pulls](https://img.shields.io/docker/pulls/vkhurana/vscode-server-dotnetcore?logo=docker)  
 ![Docker Image Version](https://img.shields.io/docker/v/vkhurana/vscode-server-dotnetcore/latest?logo=docker)
