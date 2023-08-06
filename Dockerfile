@@ -47,7 +47,7 @@ ENV DOTNET_CLI_HOME=/usr/share/dotnet
 
 # Install .NET
 # https://learn.microsoft.com/en-us/dotnet/core/tools/dotnet-install-script
-RUN wget https://dot.net/v1/dotnet-install.sh -O dotnet-install.sh \ 
+RUN wget https://dot.net/v1/dotnet-install.sh -O dotnet-install.sh \
     && chmod +x ./dotnet-install.sh \
     && ./dotnet-install.sh --install-dir /usr/share/dotnet --version latest --channel LTS\
     && ./dotnet-install.sh --install-dir /usr/share/dotnet --version latest --channel STS\
@@ -56,7 +56,11 @@ RUN wget https://dot.net/v1/dotnet-install.sh -O dotnet-install.sh \
     && dotnet --list-sdks
 
 # Install Powershell
-RUN apt-get install -y --no-install-recommends powershell
+RUN wget -q "https://packages.microsoft.com/config/ubuntu/$(lsb_release -rs)/packages-microsoft-prod.deb" \
+    && dpkg -i packages-microsoft-prod.deb \
+    && rm packages-microsoft-prod.deb \
+    && apt-get update \
+    && apt-get install -y powershell
 
 # Cleanup
 RUN apt-get clean \
