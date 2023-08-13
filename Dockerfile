@@ -43,7 +43,7 @@ RUN apt-get update && apt-get upgrade -y \
 
 # TODO: What is preferred way to set the root and get in path?
 ENV DOTNET_ROOT=/usr/share/dotnet
-ENV DOTNET_CLI_HOME=/usr/share/dotnet
+ENV DOTNET_CLI_HOME=/tmp
 
 # Install .NET
 # https://learn.microsoft.com/en-us/dotnet/core/tools/dotnet-install-script
